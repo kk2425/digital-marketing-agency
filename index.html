@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/03b6548667.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        #nav-dialog {
+            display: none;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <nav class="p-2 flex bg-white justify-between items-center">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-w-12 max-h-12" src="./assets/logo.png" alt="logo">
+            <span class="text-lg font-medium font-display text-black">MarketVibe</span>
+        </a>
+
+        <div id="nav-menu" class="hidden md:flex gap-12">
+            <a href="#about" class="font-medium text-black hover:text-blue-500">About Us</a>
+            <a href="#service" class="font-medium text-black hover:text-blue-500">Services</a>
+            <a href="#testimonial" class="font-medium text-black hover:text-blue-500">Testimonials</a>
+            <a href="#contact" class="font-medium text-black hover:text-blue-500">Contact Us</a>
+        </div>
+
+        <button id="menu-toggle" class="p-2 md:hidden">
+            <i id="menu-icon" class="fa-solid fa-bars text-black"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="./assets/logo.png" alt="Logo">
+                    <span class="text-lg font-medium font-display">MarketVibe</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i id="menu-close" class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#about" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">AboutUs</a>
+                <a href="#service" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Services</a>
+                <a href="#testimonial" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Testimonials</a>
+                <a href="#contact" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">ContactUs</a>
+            </div>
+        </div>
+    </nav>
+    <!--Main-->
+    <main>
+        <div id="hero" class="min-h-screen bg-gradient-to-b from-purple-100 via-orange-100 to-transparent">
+            <div id="hero-container" class="max-w-auto mx-auto px-6 pb-32 flex flex-col justify-center h-full relative">
+              <h1 class="pt-10 text-1xl sm:text-4xl lg:text-6xl font-bold text-left text-black mb-4">
+                Empowering Brands to <br>
+                Thrive Digitally!
+              </h1>
+              <p class="text-lg md:text-lg text-left text-black mb-6">
+                Discover the best products and services for your business.
+              </p>
+              <a href="#service" class="px-6 py-3 w-fit bg-purple-600 text-white rounded-full text-base md:text-lg hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg" style="width: fit-content;">
+                Explore Now
+              </a>
+              <img src="/assets/rb_2148896785.png" alt="Hero Image" class="flex-row absolute top-1/2 transform -translate-y-1/2 right-0 w-1/2 h-auto scale-90 rotate-12 opacity-50 lg:opacity-60">
+            </div>
+            <div id="companies-container" class="flex flex-col gap-10">
+                <div id="companies-title" class="flex justify-center gap-2">
+                <img class="translate-y-2" src="/assets/asset 2.svg" alt="Company Logo">
+                <span>Companies we worked for</span>
+                <img class="transform -scale-x-100 translate-y-2" src="/assets/asset 2.svg" alt="Flipped Company Logo">
+                </div>
+                <div id="lines-group" class="flex flex-col gap-4">
+                    <div id="line1" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:min-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 3.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white  md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 4.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 5.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 6.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 7.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 8.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 9.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 10.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 11.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 12.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 13.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 14.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 15.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 16.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                    <div id="line2" class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 17.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 18.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 19.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 3.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 8.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 5.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 13.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 10.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 15.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 12.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 6.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 7.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 9.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 18.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                    <div id="line3" class="flex md:hidden gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 3.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 23.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 21.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 24.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 20.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 17.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 19.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 5.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 6.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 7.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 9.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 21.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 20.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 jistify-center items-center rounded-xl border border-gray-300 bg-white md:min-w-32 md:-h-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="/assets/asset 24.png" alt="Company Logo">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--about-->
+    <section id="about">
+        <div id="steps" class="flex flex-col gap-5">
+
+            <h2 class="pt-14 pb-0 text-5xl sm:font-semibold mb-8">About Us</h2>
+            <div class="w-[95%] mx-auto pt-5 rounded-xl border px-14 py-14 flex flex-col bg-gradient-to-r from-yellow-50 via-orange-50 to-transparent">
+                <div class="flex flex-col gap-6 text-left">
+                    <p class="text-medium md:text-lg">At MarketVibe, we are passionate about helping businesses thrive in the digital world. Founded with a vision to bridge the gap between brands and their audiences, we specialize in delivering customized digital marketing solutions that drive real results.
+
+                        With years of experience in the industry, our team of creative thinkers, strategists, and tech enthusiasts is dedicated to transforming your brand’s digital presence. From crafting compelling social media campaigns to optimizing your online visibility through SEO and PPC, we leverage the latest tools and techniques to elevate your business.
+                        
+                        Our holistic approach ensures that each strategy we develop is tailored to your unique goals. Whether you're looking to boost engagement, increase conversions, or expand your reach, we are committed to achieving measurable success for your brand.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="service">
+        <div id="bento-grid" class="w-[95%] mx-auto flex flex-col gap-6" style="grid-auto-rows: 96px;">
+            <h2 class="pt-14 text-5xl sm:font-semibold mb-14">Our Services</h2>
+            <div id="grid-container" class="flex flex-col gap-6 md:grid md:grid-cols-3">
+                <div class="h-fit group rounded-2xl bg-red-50 p-[2px] hover:bg-gradient-to-br from-red-100 via-purple-100 to-yellow-100 transition-all duration-300">
+                    <div class="bg-white p-3 rounded-2xl w-full h-full flex flex-col items-center gap-3 transition-all duration-300 group-hover:bg-gradient-to-br from-red-50 via-purple-50 to-yellow-50">
+                        <h3 class="text-2xl mb-3">Search Engine Optimization (SEO)</h3>
+                        <p class="text-lg md:text-xl text-gray-400">We don’t just optimize—we make your brand impossible to ignore by mastering search engines and bringing you to the forefront of digital discovery.</p>
+                    </div>
+                </div>
+                <div class="h-fit group relative rounded-2xl bg-red-50 p-[2px] hover:bg-gradient-to-br from-red-100 via-purple-100 to-yellow-100 transition-all duration-300">
+                    <div class="bg-white p-6 rounded-2xl w-full h-full flex flex-col items-center gap-3 transition-all duration-300 group-hover:bg-gradient-to-br from-red-50 via-purple-50 to-yellow-50">
+                        <h3 class="text-2xl mb-3">Pay-Per-Click Advertising (PPC)</h3>
+                        
+                        <p class="text-lg md:text-xl text-gray-400">Experience a new pulse in your growth with precision-targeted ads that don’t just reach audiences, they spark conversions instantly.</p>
+                        
+                    </div>
+                </div>
+                <div class=" h-fit group rounded-2xl bg-red-50 p-[2px] hover:bg-gradient-to-br from-red-100 via-purple-100 to-yellow-100 transition-all duration-300">
+                    <div class="bg-white p-3 rounded-2xl w-full h-full flex flex-col items-center gap-3 transition-all duration-300 group-hover:bg-gradient-to-br from-red-50 via-purple-50 to-yellow-50">
+                        <h3 class="text-2xl mb-3">Social Media Marketing</h3>
+                        <p class="text-lg md:text-xl text-gray-400">Build communities, not just followers. We turn your social platforms into vibrant, engaging spaces that reflect your brand’s personality.</p>
+                    </div>
+                </div>
+                <div class="h-fit group relative rounded-2xl bg-red-50 p-[2px] hover:bg-gradient-to-br from-red-100 via-purple-100 to-yellow-100 transition-all duration-300">
+                    <div class="bg-white p-6 rounded-2xl w-full h-full flex flex-col items-center gap-3 transition-all duration-300 group-hover:bg-gradient-to-br from-red-50 via-purple-50 to-yellow-50">
+                        <h3 class="text-2xl mb-3">Content Marketing</h3>
+                        
+                        <p class="text-lg md:text-xl text-gray-400">We help you craft stories that matter. From blog posts to brand storytelling, we create content that connects with hearts, not just clicks.</p>
+                        
+                    </div>
+                </div>
+                <div class=" h-fit group rounded-2xl bg-red-50 p-[2px] hover:bg-gradient-to-br from-red-100 via-purple-100 to-yellow-100 transition-all duration-300">
+                    <div class="bg-white p-3 rounded-2xl w-full h-full flex flex-col items-center gap-3 transition-all duration-300 group-hover:bg-gradient-to-br from-red-50 via-purple-50 to-yellow-50">
+                        <h3 class="text-2xl mb-3">Web Design & Development</h3>
+                        <p class="text-lg md:text-xl text-gray-400">Your website is more than a URL—it’s a digital masterpiece. We design and build sites that are as visually stunning as they are functional.</p>
+                    </div>
+                </div>
+                <div class="h-fit group relative rounded-2xl bg-red-50 p-[2px] hover:bg-gradient-to-br from-red-100 via-purple-100 to-yellow-100 transition-all duration-300">
+                    <div class="bg-white p-6 rounded-2xl w-full h-full flex flex-col items-center gap-3 transition-all duration-300 group-hover:bg-gradient-to-br from-red-50 via-purple-50 to-yellow-50">
+                        <h3 class="text-2xl mb-3">Brand Management</h3>
+                       
+                        <p class="text-lg md:text-xl text-gray-400">Transform your brand into a force to be reckoned with. We distill your unique essence into a strategy that makes waves in the digital world.</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+
+         </section>
+        <!--keyword-->
+        <div class="w-[95%] mx-auto mt-10 overflow-hidden p-4 justify-center items-center border border-gray-300 ">
+           <div id="line4" class="flex whitespace-nowrap gap-8 p-3">
+              <h3 class="text-2xl mx-0 my-2">Performance Marketing</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">Growth Amplifiers</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">Data-Driven Results</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">Creative Strategies</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">Engagement Architects</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">Cross-Platform Solutions</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">SEO Optimizers</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">Social Media Savvy</h3>
+              <span class="text-2xl">●</span>
+              <h3 class="text-2xl mx-0 my-2">Performance Marketing</h3>
+              <span class="text-2xl">●</span>
+           </div>
+        </div>
+        <!-- Testimonials -->
+    <section id="testimonial">
+        <div id="testimonials" class="w-[95%] mx-auto">
+            <h2 class="text-5xl sm:font-semibold mb-14">Customer stories</h2>
+            <div class="rounded-xl border flex flex-col lg:flex-row items-end">
+                <div class="flex flex-col gap-12 p-8">
+                    <div class="h-4 w-fit">
+                        <img src="./assets/asset 44.svg" alt="">
+                    </div>
+                    <h3 class="text-xl leading-relaxed">ClickUp used ToDesktop to get their desktop app in front of customers in days instead of months.</h3>
+                    <div id="tag-container" class="flex gap-3 flex-wrap">
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Chromeless UI</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Native spellcheck</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Task time in menubar</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Notification count in the dock</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                            <i class="fa-solid fa-check"></i>
+                            <span class="font-display font-medium">Global hotkey to create task</span>
+                        </div>
+                    </div>
+                    <p class="text-lg font-light text-gray-500">“ToDesktop provided us with a <span class="text-gray-800">polished desktop app</span> in no time. Their expert team guided us through a smooth migration from our outdated legacy desktop app, enabling us to deliver <span class="text-gray-800">new and improved features</span> to our customers within days.”</p>
+                    <div id="user-card" class="flex gap-4">
+                        <div class="w-12">
+                            <img src="./assets/asset 45.jpeg" class="rounded-full" alt="">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Zeb Evans</h3>
+                            <p class="text-gray-500">Founder & CEO, <a href="#" class="anchor-hover">ClickUp</a> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="./assets/asset 46.png" class="pl-12" alt="">
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between gap-4 mt-6">
+                <div class="rounded-2xl gradient-hover-outer group">
+                    <div class="rounded-2xl p-6 gradient-hover-inner flex flex-col gap-6 border-separate">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                                <i class="fa-solid fa-code text-indigo-800"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Native APIs</h3>
+                        </div>
+                        <p class="text-lg font-light">What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience.</p>
+                        <div class="flex gap-4">
+                            <div class="flex">
+                                <div class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                    <img src="./assets/asset 47.png" class="min-w-16 min-h-16" alt="">
+                                </div>
+                                <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                    <img src="./assets/asset 48.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3>Rick Pastoor</h3>
+                                <a href="#" class="anchor-hover w-fit text-gray-500">Rise</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="rounded-2xl gradient-hover-outer group">
+                    <div class="rounded-2xl p-6 gradient-hover-inner flex flex-col gap-6 border-separate">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                                <i class="fa-solid fa-code text-indigo-800"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Native APIs</h3>
+                        </div>
+                        <p class="text-lg font-light">What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience.</p>
+                        <div class="flex gap-4">
+                            <div class="flex">
+                                <div class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                    <img src="./assets/asset 47.png" class="min-w-16 min-h-16" alt="">
+                                </div>
+                                <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                    <img src="./assets/asset 48.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3>Rick Pastoor</h3>
+                                <a href="#" class="anchor-hover w-fit text-gray-500">Rise</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="rounded-2xl gradient-hover-outer group">
+                    <div class="rounded-2xl p-6 gradient-hover-inner flex flex-col gap-6 border-separate">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                                <i class="fa-solid fa-code text-indigo-800"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold">Native APIs</h3>
+                        </div>
+                        <p class="text-lg font-light">What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience.</p>
+                        <div class="flex gap-4">
+                            <div class="flex">
+                                <div class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                    <img src="./assets/asset 47.png" class="min-w-16 min-h-16" alt="">
+                                </div>
+                                <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                    <img src="./assets/asset 48.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3>Rick Pastoor</h3>
+                                <a href="#" class="anchor-hover w-fit text-gray-500">Rise</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="faq" class="container">
+                <h2 class="pt-14 text-5xl sm:font-semibold mb-14">FAQs</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 items-start">
+                    <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                        <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-1">
+                            <p class="font-semibold text-lg">How long does it take to see results from digital marketing?</p>
+                            <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                        </dt>
+                        <dd id="faq-1" class="hidden text-lg font-light mt-6">
+                            <p>Results vary depending on the service. SEO may take 3-6 months for noticeable improvements, while PPC campaigns can show results within days.</p>
+                        </dd>
+                    </div>
+                    <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                        <dt class="flex justify-between items-center" aria-controls="faq-2">
+                            <p class="font-semibold text-lg">Do you work with all industries?</p>
+                            <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                        </dt>
+                        <dd id="faq-2" class="hidden text-lg font-light mt-6">
+                            <p>Yes, our team has experience working with businesses across a variety of industries, including e-commerce, healthcare, education, real estate, and more.</p>
+                        </dd>
+                    </div>
+                    <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                        <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-3">
+                            <p class="font-semibold text-lg">How do you measure the success of a digital marketing campaign?</p>
+                            <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                        </dt>
+                        <dd id="faq-3" class="hidden text-lg font-light mt-6">
+                            <p>We track performance through key metrics like website traffic, lead generation, conversion rates, and ROI. We'll provide you with regular reports to keep you informed.</p>
+                        </dd>
+                    </div>
+                    <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                        <dt class="flex justify-between items-center" aria-controls="faq-4">
+                            <p class="font-semibold text-lg">Can you create custom marketing strategies for my business?</p>
+                            <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                        </dt>
+                        <dd id="faq-4" class="hidden text-lg font-light mt-6">
+                            <p>Absolutely! We tailor our strategies to meet your specific business goals and target audience, ensuring that the approach aligns with your vision and needs.</p>
+                        </dd>
+                    </div>
+                    <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                        <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-5">
+                            <p class="font-semibold text-lg">Why should I choose your agency over others?</p>
+                            <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                        </dt>
+                        <dd id="faq-5" class="hidden text-lg font-light mt-6">
+                            <p>Our focus on personalized, data-driven strategies sets us apart. We prioritize long-term growth for your business, not just quick wins. Plus, our team stays on top of the latest marketing trends to keep your campaigns ahead of the curve.</p>
+                        </dd>
+                    </div>
+                    <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                        <dt class="flex justify-between items-center" aria-controls="faq-6">
+                            <p class="font-semibold text-lg">How do I get started?</p>
+                            <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                        </dt>
+                        <dd id="faq-6" class="hidden text-lg font-light mt-6">
+                            <p>Simply contact us through our website or give us a call. We'll schedule a free consultation to understand your business needs and goals, then craft a customized plan for your success.</p>
+                        </dd>
+                    </div>
+                </div>
+            </div>
+    </section>
+        <!--contact-->
+    <section id="contact">
+            <div class="w-[95%] mx-auto mt-10 rounded-xl border">
+                
+                <div class="flex flex-col lg:flex-row lg:space-x-6">
+            
+                   
+                    <div class="lg:w-1/2 flex flex-col space-y-6">
+                        <div class="text-5xl sm:font-semibold pt-7">Contact US</div>
+                        <p class="text-lg text-gray-600 pt-4">Feel free to reach out to us for your first consultation with MarketVibe</p>
+                        
+                  
+                        <div class="pt-10 flex flex-col gap-3 text-lg">
+                            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-solid fa-phone"></i> +91 2345678901</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-solid fa-envelope"></i> marketvibe@gmail.com</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-solid fa-location-dot"></i> 123, St. Paul Road, Mumbai-41235</a>
+                        </div>
+            
+                        <div class="pt-20 flex gap-10 text-lg">
+                            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-git"></i></a>
+                        </div>
+                    </div>
+ 
+                    <div class="lg:w-1/2 bg-primary rounded-xl shadow-lg p-8 mt-6 lg:mt-0">
+                        <form action="" class="flex flex-col space-y-4">
+                            <div>
+                                <label for="" class="text-lg text-white">Your Name</label>
+                                <input type="text" placeholder="Your Name" class="ring-1 ring-gray-300 rounded-md px-4 py-2 w-full outline-none">
+                            </div>
+                            <div>
+                                <label for="" class="text-lg text-white">Email</label>
+                                <input type="email" placeholder="Email" class="ring-1 ring-gray-300 rounded-md px-4 py-2 w-full outline-none">
+                            </div>
+                            <div>
+                                <label for="" class="text-lg text-white">Message</label>
+                                <textarea type="text" rows="4" placeholder="Message" class="ring-1 ring-gray-300 rounded-md px-4 py-2 w-full outline-none"></textarea>
+                            </div>
+                            <button class="inline-block self-end bg-white text-primary font-bold rounded-lg px-4 py-2">Submit</button>
+                        </form>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+            
+            </main>
+            <footer class="mt-7 mb-7 ">
+                <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+                    <img class="object-cover max-w-12 max-h-12" src="./assets/logo.png" alt="Logo">
+                    <span class="text-lg font-medium font-display">MarketVibe</span>
+                </a>
+                <div id="sub-footer" class="flex flex-col gap-6 items-center justify-center my-12">
+                    <div class="flex gap-2 items-center ">
+                        <img class="w-4 h-4" src="./assets/asset 8.PNG" alt="Y-combinator">
+                        <p class="text-sm text-gray-600">A Y Combinator company.</p>
+                    </div>
+                    <p class="text-sm text-gray-400">© 2024 MarketVibe, Inc. All rights reserved.</p>
+                </div>
+            </footer>
+            
+    
+</body>
+<script src="script.js"></script>
+</html>
